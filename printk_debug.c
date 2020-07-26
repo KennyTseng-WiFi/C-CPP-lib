@@ -6,3 +6,5 @@ print_hex_dump(KERN_ALERT, "", DUMP_PREFIX_ADDRESS,
 
 print_hex_dump(KERN_ALERT, "", DUMP_PREFIX_OFFSET,
                16, 1, skb->data, skb->len, 1);
+
+pr_err("%s-%d cpu[%d]: kenny - caller %pF!\n", __func__, __LINE__, smp_processor_id(), __builtin_return_address(0));
